@@ -21,9 +21,9 @@ dependencies = [
   "rich",
   "tqdm",
   "typer",
-  "dibs_computing_core @ git+https://github.com/AndreM84/DibsComputingCore.git@dibscc101",
-  "dibs_datasource_csv @ git+https://github.com/AndreM84/DibsDataSourceCSV.git@primary_energy",
-#  "dibs_datasource_csv @ git+https://github.com/AndreM84/DibsDataSourceCSV.git@dibsdatasourcecvs102",
+  "dibs_computing_core @ git+https://github.com/AndreM84/DibsComputingCore_AM.git@dibscc101",
+  "dibs_datasource_csv @ git+https://github.com/AndreM84/DibsDataSourceCSV_AM.git@primary_energy",
+#  "dibs_datasource_csv @ git+https://github.com/AndreM84/DibsDataSourceCSV_AM.git@dibsdatasourcecvs102",
 #  "dibs_datasource_csv",
 #  "dibs_data"
 ]
@@ -37,7 +37,7 @@ classifiers = [
 dibs-cli = 'dibs_cli.main:app'
 
 [project.urls]
-Repository = "https://github.com/AndreM84/DibsCLI"
+Repository = "https://github.com/AndreM84/DibsCLI_AM"
 
 [tool.black]
 line-length = 88
