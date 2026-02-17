@@ -119,7 +119,7 @@ def simulate_all_building(
     dibs = DIBS(datasource_csv)
 
     file_name = os.path.basename(data_path)
-    simulation_time, result_of_all_hours, summary_result = dibs.multi()
+    simulation_time, result_of_all_hours, summary_result = dibs.safe_multi()
 
     with tqdm(total=1, desc="Writing summary result in ", colour='red') as pbar:
         start_time = time.time()
@@ -196,7 +196,7 @@ def simulate_buildings_with_batches(
         end = min(start + batch_size, total_buildings)
         batch_results = []
 
-        simulation_time, result_of_all_hours, summary_result = dibs.multi_with_batches(user_args, buildings, start, end,
+        simulation_time, result_of_all_hours, summary_result = dibs.safe_multi_with_batches(user_args, buildings, start, end,
                                                                                        batch_results)
 
         with tqdm(total=1, desc="Writing summary result in ", colour='red') as pbar:
